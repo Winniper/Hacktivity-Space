@@ -1,7 +1,11 @@
-import LandingPage from "./pages/LandingPage";
+import { BrowserRouter } from "react-router-dom";
+import AppRouter from "./routes/AppRouter";
 
 export default function App() {
   return (
-    <LandingPage/>
+    <BrowserRouter>
+      <AppRouter/>
+    </BrowserRouter>
   )
 }
+
