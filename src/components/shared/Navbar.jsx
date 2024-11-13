@@ -1,9 +1,9 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion"
 
 const Navbar = () => {
   return (
-    <div className="bg-transparent py-6">
+    <div className="bg-transparent py-6 fixed top-0 z-10 w-full">
       <SlideTabs />
     </div>
   );
@@ -24,7 +24,7 @@ const SlideTabs = () => {
           opacity: 0,
         }));
       }}
-      className="relative mx-auto flex w-fit rounded-full border-2 border-[#3B82F6] bg-black text-white p-1"
+      className="relative mx-auto flex w-fit rounded-full border-2 border-[#3B82F6] bg-[#202020] text-white p-1"
     >
       <Tab setPosition={setPosition}>Home</Tab>
       <Tab setPosition={setPosition}>Profile</Tab>

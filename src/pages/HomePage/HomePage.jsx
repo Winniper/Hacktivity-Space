@@ -1,9 +1,7 @@
-import Navbar from "../../components/shared/Navbar"
-
 
 const HomePage = () => {
   return (
-    <Navbar/>
+    <div className="w-full h-screen bg-black text-white">Home Page</div>
   )
 }
 
