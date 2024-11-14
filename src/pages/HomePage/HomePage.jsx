@@ -1,7 +1,8 @@
+import HomeContainer from "../../container/HomeContainer/HomeContainer"
 
 const HomePage = () => {
   return (
-    <div className="w-full h-screen bg-black text-white">Home Page</div>
+    <HomeContainer/>
   )
 }
 

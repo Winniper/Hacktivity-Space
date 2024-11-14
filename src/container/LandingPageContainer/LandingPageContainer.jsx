@@ -7,6 +7,7 @@ const LandingPageContainer = () => {
     const handleClick = () => {
         navigate('/login')
     }
+    
     return(
         <TypewriterView onClick={handleClick}/>
     )
