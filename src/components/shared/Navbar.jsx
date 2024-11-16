@@ -1,10 +1,11 @@
 import { useRef, useState } from "react";
 import { motion } from "framer-motion"
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <div className="bg-transparent py-6 fixed top-0 z-10 w-full">
-      <SlideTabs />
+      <SlideTabs/>
     </div>
   );
 }
@@ -16,6 +17,11 @@ const SlideTabs = () => {
     opacity: 0,
   });
 
+  const navigate = useNavigate()
+  const handleClick = (path) => {
+    navigate(`${path}`)
+  }
+
   return (
     <ul
       onMouseLeave={() => {
@@ -26,15 +32,15 @@ const SlideTabs = () => {
       }}
       className="relative mx-auto flex w-fit rounded-full border-2 border-[#3B82F6] bg-[#202020] text-white p-1"
     >
-      <Tab setPosition={setPosition}>Home</Tab>
-      <Tab setPosition={setPosition}>Profile</Tab>
+      <Tab setPosition={setPosition} onClick={() => handleClick('home')}>Home</Tab>
+      <Tab setPosition={setPosition} onClick={() => handleClick('profile')}>Profile</Tab>
       <Tab setPosition={setPosition}>Logout</Tab>
       <Cursor position={position} />
     </ul>
   );
 };
 
-const Tab = ({ children, setPosition }) => {
+const Tab = ({ children, setPosition, onClick }) => {
   const ref = useRef(null);
 
   return (
@@ -51,6 +57,7 @@ const Tab = ({ children, setPosition }) => {
           opacity: 1,
         });
       }}
+      onClick={onClick}
       className="relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase font-poppins hover:text-white md:px-5 md:py-3 md:text-base"
     >
       {children}
