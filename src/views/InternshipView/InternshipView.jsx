@@ -34,7 +34,6 @@ const InternshipView = () => {
   const displayCard = (internship) => {
     return (
       <Card key={internship.id} classname="bg-[#FAE932] text-black" text={internship.tittle} onClick={() => handleCardClick(internship.id)} />
-
     );
   }
 
@@ -47,16 +46,12 @@ const InternshipView = () => {
   }
 
   return (
-    <>
       <div className="w-full h-screen bg-black flex justify-center items-center overflow-auto">
         <div className="flex flex-col gap-5 w-11/12 sm:w-3/4 h-full pt-24 pb-10">
           {displayInternships}
-
         </div>
-
       </div>
 
-    </>
   )
 }
 

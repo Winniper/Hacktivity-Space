@@ -8,6 +8,9 @@ import InternshipPage from '../pages/InternshipPage/InternshipPage'
 import Page404 from '../pages/Page404/Page404'
 import ProfilePage from '../pages/ProfilePage/ProfilePage'
 import InternshipDetails from '../views/InternshipView/InternshipDetails'
+import Cms from '../pages/Cms/Cms'
+import CmsIntern from '../pages/Cms/CmsIntern'
+import PostHackathons from '../pages/PostItems/PostHackathons'
 
 
 const AppRouter = () => {
@@ -17,8 +20,11 @@ const AppRouter = () => {
       <Route path="/login" element={<LoginPage />} />
       <Route element={<Layout />}>
         <Route path='/home' element={<HomePage />} />
+        <Route path='/cms' element={<Cms />} />
+        <Route path='/cms/internships' element={<CmsIntern />} />
         <Route path='/profile' element={<ProfilePage/>}/>
         <Route path='/hackathons' element={<HackathonPage />} />
+        <Route path="/post/hackathons/" element={<PostHackathons />} />
         <Route path='/internships' element={<InternshipPage />} />
         <Route path="/internships/:id" element={<InternshipDetails />} />
         <Route path='*' element={<Page404 />} />
