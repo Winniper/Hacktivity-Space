@@ -1,9 +1,9 @@
 import clsx from 'clsx'
 import React from 'react'
-const cardStyles = "bg-gradient-to-br from-green-900 via-yellow-800 to-green-700 flex flex-col items-center font-poppins  text-white text-sm  transition-all shadow-[3px_3px_0px_black] hover:shadow-none active:scale-95 p-0 sm:p-6 md:p-8 rounded-3xl"
+const cardStyles = "bg-[#52525b] flex flex-col items-center font-poppins  text-white text-sm  transition-all shadow-[3px_3px_0px_black] hover:shadow-none active:scale-95 p-0 sm:p-6 md:p-8 rounded-3xl"
 const ProfilePage = () => {
     const details = {
-        name: "callmeD...",
+        name: "NoOne",
         rollno: "101803123",
         email: "nothing@thapar.edu",
         phone: "1234567890",
