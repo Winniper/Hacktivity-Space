@@ -1,6 +1,8 @@
 import { useRef, useState } from "react";
 import { motion } from "framer-motion"
 import { useNavigate } from "react-router-dom";
+import { signOut } from "firebase/auth";
+import { auth } from "../../lib/config/FirestoreConfig";
 
 const Navbar = () => {
   return (
@@ -22,6 +24,14 @@ const SlideTabs = () => {
     navigate(`${path}`)
   }
 
+  const handleLogout = async() => {
+    try {
+      signOut(auth)
+      navigate("/")
+    } catch (e) {
+      console.log(e)
+    }
+  }
   return (
     <ul
       onMouseLeave={() => {
@@ -34,7 +44,7 @@ const SlideTabs = () => {
     >
       <Tab setPosition={setPosition} onClick={() => handleClick('home')}>Home</Tab>
       <Tab setPosition={setPosition} onClick={() => handleClick('profile')}>Profile</Tab>
-      <Tab setPosition={setPosition}>Logout</Tab>
+      <Tab setPosition={setPosition} onClick={handleLogout}>Logout</Tab>
       <Cursor position={position} />
     </ul>
   );
