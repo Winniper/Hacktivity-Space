@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import { useLocation } from 'react-router-dom'
 
-const cardStyles = "bg-gradient-to-br from-green-900 via-yellow-800 to-green-700 flex flex-col items-center font-poppins  text-white text-sm  transition-all shadow-[3px_3px_0px_black] hover:shadow-none active:scale-95 p-0 sm:p-6 md:p-8 rounded-3xl"
+const cardStyles = "bg-[#6b7280] flex flex-col items-center font-poppins  text-white text-sm  transition-all shadow-[3px_3px_0px_black] hover:shadow-none active:scale-95 p-0 sm:p-6 md:p-8 rounded-3xl"
 const ProfilePage = () => {
     const location = useLocation()
     const {teamName} = location.state || {};
