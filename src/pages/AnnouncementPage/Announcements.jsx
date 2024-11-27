@@ -33,7 +33,7 @@ const Announcements = () => {
       <div className="w-full h-screen bg-black flex justify-center items-center overflow-auto">
         <div className="flex flex-col gap-5 w-11/12 sm:w-3/4 h-full pt-24 pb-10">
           {announcementsList.map((announcement,idx) => (
-            <Card key={idx} classname="bg-[#FAE932] text-black" text={announcement.text} />
+            <Card key={idx} classname="bg-[#958AAA] text-black" text={announcement.text} />
           ))}
         </div>
       </div>
