@@ -1,6 +1,7 @@
-// import TypewriterView from "../../views/TypeWriterView/TypewriterView"
 import { useNavigate } from "react-router-dom"
-
+import CustomButton from "../../components/base/CustomButton"
+import Particle from "../../components/custom/Particle"
+import TextAnimation from "./TextAnimation"
 
 const LandingPageContainer = () => {
     const navigate = useNavigate()
@@ -17,7 +18,6 @@ const LandingPageContainer = () => {
         <CustomButton variant={"primary"} onClick={onClick}>Login</CustomButton>
       </div>
     </div>
-        // <TypewriterView onClick={handleClick}/>
     )
 }
 
