@@ -10,6 +10,9 @@ import ProfilePage from '../pages/ProfilePage/ProfilePage'
 import InternshipDetails from '../views/InternshipView/InternshipDetails'
 import HackathonDetail from '../pages/HackathonDetailPage/HackathonDetail'
 import CreateTeamPage from '../pages/CreateTeamPage/CreateTeamPage'
+import Cms from '../pages/Cms/Cms'
+import CmsIntern from '../pages/Cms/CmsIntern'
+import PostHackathons from '../pages/PostItems/PostHackathons'
 
 
 const AppRouter = () => {
@@ -19,8 +22,11 @@ const AppRouter = () => {
       <Route path="/login" element={<LoginPage />} />
       <Route element={<Layout />}>
         <Route path='/home' element={<HomePage />} />
+        <Route path='/cms' element={<Cms />} />
+        <Route path='/cms/internships' element={<CmsIntern />} />
         <Route path='/profile' element={<ProfilePage/>}/>
         <Route path='/hackathons' element={<HackathonPage />} />
+        <Route path="/post/hackathons/" element={<PostHackathons />} />
         <Route path='/internships' element={<InternshipPage />} />
         <Route path="/internships/:id" element={<InternshipDetails />} />
         <Route path="/hackathons/:id" element={<HackathonDetail />} />

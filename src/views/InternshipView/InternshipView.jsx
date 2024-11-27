@@ -35,7 +35,6 @@ const InternshipView = () => {
     navigate(`/internships/${id}`);
   };
 
-
   return(
     <>
       <div className="w-full h-screen bg-black flex justify-center items-center overflow-auto">
@@ -44,7 +43,6 @@ const InternshipView = () => {
             <Card key={internship.internship_id} classname="bg-[#FAE932] text-black" text={internship.name} onClick={() => handleCardClick(internship.internship_id)} />
           ))}
         </div>
-
       </div>
     </>
   )
