@@ -8,6 +8,8 @@ import InternshipPage from '../pages/InternshipPage/InternshipPage'
 import Page404 from '../pages/Page404/Page404'
 import ProfilePage from '../pages/ProfilePage/ProfilePage'
 import InternshipDetails from '../views/InternshipView/InternshipDetails'
+import HackathonDetail from '../pages/HackathonDetailPage/HackathonDetail'
+import CreateTeamPage from '../pages/CreateTeamPage/CreateTeamPage'
 import Cms from '../pages/Cms/Cms'
 import CmsIntern from '../pages/Cms/CmsIntern'
 import PostHackathons from '../pages/PostItems/PostHackathons'
@@ -27,6 +29,8 @@ const AppRouter = () => {
         <Route path="/post/hackathons/" element={<PostHackathons />} />
         <Route path='/internships' element={<InternshipPage />} />
         <Route path="/internships/:id" element={<InternshipDetails />} />
+        <Route path="/hackathons/:id" element={<HackathonDetail />} />
+        <Route path="/createteam" element={<CreateTeamPage />} />
         <Route path='*' element={<Page404 />} />
       </Route>
     </Routes>
