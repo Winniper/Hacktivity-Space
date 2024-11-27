@@ -1,5 +1,6 @@
 import CustomButton from "../../components/base/CustomButton";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { db } from "../../lib/config/FirestoreConfig";
 import { getDocs, collection } from "firebase/firestore";
 import clsx from "clsx";
@@ -7,9 +8,10 @@ import clsx from "clsx";
 const cardStyles =
   "bg-[#082f49] flex flex-col items-center font-poppins text-white text-sm transition-all shadow-[3px_3px_0px_black] hover:shadow-none active:scale-95 p-0 sm:p-6 md:p-8 rounded-3xl";
 
-const InternshipDetails = () => {
+const HackathonDetail = () => {
   const [internshipsList, setInternshipsList] = useState([]);
   const internshipRef = collection(db, "internship");
+  const navigate = useNavigate()
 
   const getInternshipList = async () => {
     try {
@@ -33,6 +35,11 @@ const InternshipDetails = () => {
     getInternshipList();
   }, []);
 
+
+    const handleJoin = () => {}
+    const handleCreate = () => {
+        navigate("/createteam")
+    }
   return (
     <div className="w-full h-screen bg-black flex justify-center items-center overflow-auto ">
       <div className="flex flex-col gap-5 w-11/12 sm:w-3/4 h-full pt-24 pb-10">
@@ -47,11 +54,15 @@ const InternshipDetails = () => {
             <div className="flex justify-evenly w-full items-baseline">
               <CustomButton
                 variant="primary"
-                onClick={() => {window.open(internship.intershipURL)
-                    console.log(internship.intershipURL)
-                }}
+                onClick={handleCreate}
               >
-                APPLY HERE
+                CREATE A TEAM
+              </CustomButton>
+              <CustomButton
+                variant="primary"
+                onClick={handleJoin}
+              >
+                JOIN A TEAM
               </CustomButton>
               <span className="text-red-500">Last date: {internship.last_date}</span>
             </div>
@@ -62,4 +73,4 @@ const InternshipDetails = () => {
   );
 };
 
-export default InternshipDetails;
+export default HackathonDetail;
