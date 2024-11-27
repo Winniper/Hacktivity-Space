@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom"
 import CustomButton from "../../components/base/CustomButton"
 import Particle from "../../components/custom/Particle"
-import TextAnimation from "./TextAnimation"
+import TextAnimation from "../../views/TypeWriterView/TextAnimation"
 
 const LandingPageContainer = () => {
     const navigate = useNavigate()
@@ -15,7 +15,7 @@ const LandingPageContainer = () => {
       <span className="text-white text-3xl font-poppins tracking-tighter font-medium"><span className="text-[#3B82F6] text-3xl font-poppins">Hacktivity</span> Space</span>
       <TextAnimation/>
       <div className="flex space-x-6">
-        <CustomButton variant={"primary"} onClick={onClick}>Login</CustomButton>
+        <CustomButton variant={"primary"} onClick={handleClick}>Login</CustomButton>
       </div>
     </div>
     )
